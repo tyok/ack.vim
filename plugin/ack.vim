@@ -33,6 +33,7 @@ function! s:Ack(cmd, args)
 
     let grepprg_bak=&grepprg
     let grepformat_bak=&grepformat
+    wincmd w
     try
         let &grepprg=g:ackprg
         let &grepformat=g:ackformat
