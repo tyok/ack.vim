@@ -55,6 +55,8 @@ function! s:Ack(cmd, args)
     exec "nnoremap <silent> <buffer> go <CR><C-W><C-W>"
     exec "nnoremap <silent> <buffer> v <C-W><C-K><C-W>v<C-L><C-W><C-J><CR>"
     exec "nnoremap <silent> <buffer> gv <C-W><C-K><C-W>v<C-L><C-W><C-J><CR><C-W><C-J>"
+    exec "nnoremap <silent> <buffer> s <C-W><C-K><C-W>s<C-L><C-W><C-J><C-W><C-J><CR>"
+    exec "nnoremap <silent> <buffer> gs <C-W><C-K><C-W>s<C-L><C-W><C-J><C-W><C-J><CR><C-W><C-J>"
 
     " If highlighting is on, highlight the search keyword.
     if exists("g:ackhighlight")
