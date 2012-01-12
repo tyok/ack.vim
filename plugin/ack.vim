@@ -53,8 +53,8 @@ function! s:Ack(cmd, args)
     exec "nnoremap <silent> <buffer> T <C-W><CR><C-W>TgT<C-W><C-W>"
     exec "nnoremap <silent> <buffer> o <CR>"
     exec "nnoremap <silent> <buffer> go <CR><C-W><C-W>"
-    exec "nnoremap <silent> <buffer> v <C-W><C-W><C-W>v<C-L><C-W><C-J><CR>"
-    exec "nnoremap <silent> <buffer> gv <C-W><C-W><C-W>v<C-L><C-W><C-J><CR><C-W><C-J>"
+    exec "nnoremap <silent> <buffer> v <C-W><C-K><C-W>v<C-L><C-W><C-J><CR>"
+    exec "nnoremap <silent> <buffer> gv <C-W><C-K><C-W>v<C-L><C-W><C-J><CR><C-W><C-J>"
     exec "nnoremap <silent> <buffer> s <C-W>k<C-W>s<C-J><C-W><C-J><CR>"
     " match nerdtree behavior
     exec "nnoremap <silent> <buffer> i <C-W>k<C-W>s<C-J><C-W><C-J><CR>"
