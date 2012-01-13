@@ -53,10 +53,18 @@ function! s:Ack(cmd, args)
     exec "nnoremap <silent> <buffer> T <C-W><CR><C-W>TgT<C-W><C-W>"
     exec "nnoremap <silent> <buffer> o <CR>"
     exec "nnoremap <silent> <buffer> go <CR><C-W><C-W>"
-    exec "nnoremap <silent> <buffer> v <C-W><C-K><C-W>v<C-L><C-W><C-J><CR>"
-    exec "nnoremap <silent> <buffer> gv <C-W><C-K><C-W>v<C-L><C-W><C-J><CR><C-W><C-J>"
-    exec "nnoremap <silent> <buffer> s <C-W><C-K><C-W>s<C-L><C-W><C-J><C-W><C-J><CR>"
-    exec "nnoremap <silent> <buffer> gs <C-W><C-K><C-W>s<C-L><C-W><C-J><C-W><C-J><CR><C-W><C-J>"
+
+    if exists("g:NERDTreeWinPos") && g:NERDTreeWinPos ==# "left"
+        exec "nnoremap <silent> <buffer> v <C-W>W<C-W>v<C-W><C-J><CR>"
+        exec "nnoremap <silent> <buffer> gv <C-W>W<C-W>v<C-W><C-J><CR><C-W><C-J>"
+        exec "nnoremap <silent> <buffer> s <C-W>W<C-W>s<C-W><C-J><C-W><C-J><CR>"
+        exec "nnoremap <silent> <buffer> gs <C-W>W<C-W>s<C-W><C-J><C-W><C-J><CR><C-W><C-J>"
+    else
+        exec "nnoremap <silent> <buffer> v <C-W>W<C-W><C-H><C-W>v<C-W><C-J><CR>"
+        exec "nnoremap <silent> <buffer> gv <C-W>W<C-W><C-H><C-W>v<C-W><C-J><CR><C-W><C-J>"
+        exec "nnoremap <silent> <buffer> s <C-W><C-K><C-W>s<C-W><C-J><C-W><C-J><CR>"
+        exec "nnoremap <silent> <buffer> gs <C-W><C-K><C-W>s<C-W><C-J><C-W><C-J><CR><C-W><C-J>"
+    endif
 
     " If highlighting is on, highlight the search keyword.
     if exists("g:ackhighlight")
